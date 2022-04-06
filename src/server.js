@@ -6,7 +6,7 @@ const http = require("http");
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const publicDirctoryPath = path.join(__dirname, "../public");
 const Filter = require("bad-words");
 const {
